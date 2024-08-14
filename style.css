@@ -1,0 +1,50 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+h1, h2, p {
+    color: #E31B23;
+}
+
+.btn-danger {
+    background-color: #DA291C;
+    border-color: #DA291C;
+}
+
+footer {
+    margin-top: 50px;
+    color: #E31B23;
+}
+
+/* Heart Animation */
+.hearts::before, .hearts::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('hearts.svg');
+    background-size: 50px 50px;
+    background-repeat: repeat;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    animation: float 20s linear infinite;
+}
+
+.hearts::after {
+    animation-delay: 10s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
